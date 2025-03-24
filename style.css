@@ -1,5 +1,4 @@
-
-* {
+{
    box-sizing: border-box;
 }
 body, section, header, div, p, h1, h2, h3, ul, li, figure, figcaption {
@@ -14,3 +13,168 @@ body {
 }
 
 /* add styles here */
+header {
+   background-image: url(images/florence.jpg);
+   background-size: cover;
+   width: 100%;
+   min-height: 500px;
+ }
+
+ nav {
+   background-image: url(images/logo.svg);
+   background-size: 60px;
+   background-repeat: no-repeat;
+   background-position: 10px 5px;
+   padding: 20px;
+   height: 100px;
+}
+
+nav ul {
+   margin-left: 80px;
+}
+nav li {
+   display: inline-block;
+   list-style-type: none;
+}
+nav a {
+   color: #51279b;
+   text-decoration: none;
+   padding: 10px;
+   font-weight: 600;
+}
+nav a:visited {
+   color: #8662c7;
+}
+nav a:hover {
+   color: #8662c7;
+   text-decoration: underline;
+}
+
+header div {
+   margin: 100px 0 0 80px;
+   color: white;
+}
+header h2 {
+   font-size: 48px;
+   margin-bottom: 0.5rem;
+}
+header p {
+   font-size: 24px;
+   margin-bottom: 1.5rem;
+}
+
+header div a {
+   background-color: #51279b;
+   color: white;
+   padding: 10px 20px;
+   text-decoration: none;
+   border-radius: 5px;
+}
+header div a:hover {
+   background-color: #8662c7;
+}
+
+main {
+   display: flex;
+   flex-wrap: wrap; /* Allow cards to wrap if they don’t fit in one row */
+   gap: 10px; /* Uniform spacing between cards */
+}
+
+.card {
+   flex: 1 1 calc(33.333% - 20px); /* Responsive width with space adjustments */
+   background-color: white;
+}
+
+.card div {
+   padding: 20px 5px;
+}
+.card img {
+   width: 100%;
+}
+.card div.description {
+   font-size: 12px;
+}
+.card h3 {
+   font-size: 14px;
+}
+
+.social {
+   margin-top: 1rem;
+   font-size: 12px;
+}
+.social span {
+   background-size: contain;
+   background-repeat: no-repeat;
+   padding-left: 25px;
+   margin-right: 10px;
+}
+.social .heart {
+   background-image: url(images/heart.png);
+}
+.social .comment {
+   background-image: url(images/comment.png);
+}
+
+main {
+   display: flex;
+   flex-wrap: wrap; /* Allows cards to wrap to the next row if necessary */
+   justify-content: space-between; /* Distributes space between cards */
+   gap: 10px; /* Adds consistent spacing between cards */
+}
+
+.card {
+   flex: 1 1 calc(33.333% - 20px); /* Adjust width to 33.333% minus the total gap (10px on each side) */
+   background-color: white;
+   margin: 0; /* Remove unnecessary margins */
+}
+
+.card div {
+   padding: 20px;
+}
+.card img {
+   width: 100%; /* Ensure the image stretches to the full width of the card */
+}
+
+@media (max-width: 768px) {
+   .card {
+       flex: 1 1 calc(50% - 20px); /* Two cards per row on medium screens */
+   }
+}
+
+@media (max-width: 480px) {
+   .card {
+       flex: 1 1 100%; /* Single card per row on small screens */
+   }
+}
+
+main {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   gap: 10px;
+}
+
+.card {
+   flex: 1 1 calc(33.333% - 20px);
+   background-color: white;
+}
+
+.card div {
+   padding: 20px;
+}
+
+.card img {
+   width: 100%;
+}
+
+@media (max-width: 768px) {
+   .card {
+       flex: 1 1 calc(50% - 20px);
+   }
+}
+
+@media (max-width: 480px) {
+   .card {
+       flex: 1 1 100%;
+   }
+}
